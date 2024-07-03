@@ -3,6 +3,7 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import cardimg from '../assets/cardImg.png'
 // import cardimg from "../assets/back.png";
+import { BASE_URL } from '../assets/Services'
 const Cards = () => {
 
 
@@ -14,7 +15,7 @@ const Cards = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/multiplayer/serverinfo/cards');
+        const response = await axios.get(`${BASE_URL}multiplayer/serverinfo/cards`);
         setData(response.data.data);
         console.log(response.data)
       } catch (error) {

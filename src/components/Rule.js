@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 import axios from 'axios';
+import { BASE_URL } from '../assets/Services';
 const Rule = () => {
 
   const [data, setData] = useState(null);
@@ -10,7 +11,7 @@ const Rule = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/multiplayer/serverinfo/rules');
+        const response = await axios.get(`${BASE_URL}multiplayer/serverinfo/rules`);
         setData(response.data.data);
         console.log(response.data)
       } catch (error) {

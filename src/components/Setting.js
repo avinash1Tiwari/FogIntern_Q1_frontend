@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 import axios from 'axios';
-
+import { BASE_URL } from '../assets/Services';
 export const Setting = () => {
 
 
@@ -12,7 +12,7 @@ export const Setting = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/multiplayer/serverinfo/settings');
+        const response = await axios.get(`${BASE_URL}multiplayer/serverinfo/settings`);
         setData(response.data.data);
         console.log(response.data)
       } catch (error) {

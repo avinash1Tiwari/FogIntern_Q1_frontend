@@ -42,7 +42,7 @@ import './App.css';
 import Body from './components/Body';
 import LeftBar from './components/LeftBar';
 import RightBar from './components/RightBar';
-import Cards from './components/Cards';
+
 function App() {
   return (
     <div className="App bg-slate-700 h-screen overflow-hidden">

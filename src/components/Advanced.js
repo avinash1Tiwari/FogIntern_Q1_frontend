@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { useState,useEffect } from 'react'
-
+import { BASE_URL } from '../assets/Services'
 const Advanced = () => {
 
     const [data, setData] = useState(null);
@@ -11,7 +11,7 @@ const Advanced = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get('http://localhost:3001/multiplayer/serverinfo/advanced');
+          const response = await axios.get(`${BASE_URL}multiplayer/serverinfo/advanced`);
           setData(response.data.data);
           console.log(response.data)
         } catch (error) {
