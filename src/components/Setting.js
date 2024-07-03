@@ -12,7 +12,7 @@ export const Setting = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${BASE_URL}multiplayer/serverinfo/settings`);
+        const response = await axios.get(`${BASE_URL}settings`);
         setData(response.data.data);
         console.log(response.data)
       } catch (error) {

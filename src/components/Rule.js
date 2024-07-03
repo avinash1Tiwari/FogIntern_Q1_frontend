@@ -11,7 +11,7 @@ const Rule = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${BASE_URL}multiplayer/serverinfo/rules`);
+        const response = await axios.get(`${BASE_URL}rules`);
         setData(response.data.data);
         console.log(response.data)
       } catch (error) {

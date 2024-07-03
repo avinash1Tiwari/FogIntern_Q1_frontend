@@ -11,7 +11,7 @@ const Advanced = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get(`${BASE_URL}multiplayer/serverinfo/advanced`);
+          const response = await axios.get(`${BASE_URL}advanced`);
           setData(response.data.data);
           console.log(response.data)
         } catch (error) {

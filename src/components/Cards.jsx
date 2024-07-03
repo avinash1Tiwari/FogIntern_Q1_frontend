@@ -15,7 +15,7 @@ const Cards = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${BASE_URL}multiplayer/serverinfo/cards`);
+        const response = await axios.get(`${BASE_URL}cards`);
         setData(response.data.data);
         console.log(response.data)
       } catch (error) {
